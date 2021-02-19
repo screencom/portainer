@@ -19,3 +19,9 @@ status: ## Show stack status
 
 pull: ## Pull required images
 	docker-compose pull
+
+gitpull: ## Update git repo
+	git pull
+
+update: ## Update this repo and restart
+update: down pull gitpull up
