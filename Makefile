@@ -9,7 +9,7 @@ up: ## Start stack
 	docker-compose up -d
 
 down: ## Stop stack
-	ocker-compose down
+	docker-compose down
 
 restart: ## Restart stack
 restart: down up
