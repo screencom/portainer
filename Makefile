@@ -11,7 +11,7 @@ up: ## Start stack
 ifeq ($(SWARM), active)
 	docker stack deploy -c docker-stack.yml portainer
 else
-	docker-compuse up -d
+	docker-compose up -d
 endif
 
 down: ## Stop stack
