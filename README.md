@@ -3,7 +3,7 @@
 On the docker server, run 
 
 ```shell
-git clone git@github.com:screencom/portainer.git
+git clone https://github.com/screencom/portainer.git
 cd portainer
 make up
 ```
