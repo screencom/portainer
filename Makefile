@@ -11,14 +11,14 @@ up: ## Start stack
 ifeq ($(SWARM), active)
 	docker stack deploy -c docker-stack.yml portainer
 else
-	docker-compuse up -d
+	docker compuse up -d
 endif
 
 down: ## Stop stack
 ifeq ($(SWARM), active)
 	docker stack rm portainer
 else
-	docker-compose down
+	docker compose down
 endif
 
 restart: ## Restart stack
@@ -28,14 +28,14 @@ status: ## Show stack status
 ifeq ($(SWARM), active)
 	docker stack ps portainer
 else
-	docker-compose ps
+	docker compose ps
 endif
 
 pull: ## Pull required images
 ifeq ($(SWARM), active)
 	echo "there is no need to pull in swarm mode"
 else
-	docker-compose pull
+	docker compose pull
 endif
 
 gitpull: ## Update git repo
