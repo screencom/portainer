@@ -7,6 +7,8 @@ help: ## Show this help message
 
 SWARM := $(shell docker info --format '{{.Swarm.LocalNodeState}}')
 
+COMPOSE_PROJECT_NAME := portainer
+
 up: ## Start stack
 ifeq ($(SWARM), active)
 	docker stack deploy -c docker-stack.yml portainer
